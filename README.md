@@ -16,6 +16,12 @@ Sube los archivos con estos nombres exactos y aparecen solos, sin tocar el códi
 | `img/tienda.webp` | sección Visítanos | 1200x900 |
 | `img/og/baby-karzy.jpg` | vista previa al compartir | 1200x630 |
 
+## Fotos del catálogo (hoy son imágenes de muestra)
+Cada prenda tiene 15 fotos, una por color: `img/catalogo/<prenda>/<color>.webp`. Para poner las fotos reales, reemplaza el archivo con el mismo nombre (WebP, 600x750, ideal menos de 60 KB). La página las carga solas, sin tocar código.
+
+- Prendas (carpetas): `polo-manga-larga`, `body-manga-corta`, `body-manga-larga`, `cafarena`, `pantalon-con-pie`
+- Colores (archivos): `rosado`, `lila`, `fresa`, `palo-rosa`, `azul`, `rojo`, `celeste`, `cielo`, `plomo-plata`, `verde-pastel`, `amarillo`, `verde-cemento`, `blanco`, `crema`, `beige`
+
 ## Pendiente de completar
 - Precio unidad y docena de polo manga corta y short (hoy dicen "Consulta precio").
 - RUC y razón social (footer y Libro de Reclamaciones).
