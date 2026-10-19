@@ -12,7 +12,7 @@ Sube los archivos con estos nombres exactos y aparecen solos, sin tocar el códi
 | `img/productos/pantalon-sin-pie.webp` | tarjeta + Google | 800x1000 |
 | `img/productos/polo-manga-corta.webp` | tarjeta | 800x1000 |
 | `img/productos/short.webp` | tarjeta | 800x1000 |
-| `img/interlok-tela.webp` | sección Interlok | 800x800 |
+| `img/algodon-pima.webp` | sección Calidad de la tela | 800x800 |
 | `img/tienda.webp` | sección Visítanos | 1200x900 |
 | `img/og/baby-karzy.jpg` | vista previa al compartir | 1200x630 |
 
