@@ -18,6 +18,6 @@ Sube los archivos con estos nombres exactos y aparecen solos, sin tocar el códi
 
 ## Pendiente de completar
 - Precio unidad y docena de polo manga corta y short (hoy dicen "Consulta precio").
-- Días de atención de la tienda, RUC y razón social (footer y Libro de Reclamaciones).
+- RUC y razón social (footer y Libro de Reclamaciones).
 - Dominio real (hoy `babykarzy.com` en canonical, sitemap y robots).
 - Pixel de Meta / TikTok y GTM, si los usas.
