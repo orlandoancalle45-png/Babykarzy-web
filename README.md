@@ -1,6 +1,6 @@
 # Baby Karzy · web
 
-Landing de ropa de bebé en Interlok (0 meses a 3 años). HTML estático, sin dependencias: abre `index.html` o publícalo en cualquier hosting.
+Landing de ropa de bebé en 100% algodón pima (0 meses a 3 años). HTML estático, sin dependencias: abre `index.html` o publícalo en cualquier hosting.
 
 ## Fotos y logo (espacios marcados)
 Sube los archivos con estos nombres exactos y aparecen solos, sin tocar el código:
