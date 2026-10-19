@@ -19,8 +19,6 @@ Las 9 prendas de "Nuestros básicos" tienen una foto por color (15 colores): `im
 | `img/og/baby-karzy.jpg` | vista previa al compartir | 1200x630 |
 
 ## Pendiente de completar
-- Precio por unidad del polo manga corta (hoy dice "Consulta precio").
-- Medida "Largo de manga" del polo manga larga y de la cafarena (las tablas hoy muestran largo y ancho de pecho).
 - RUC y razón social (footer y Libro de Reclamaciones).
 - Dominio real (hoy `babykarzy.com` en canonical, sitemap y robots).
 - Pixel de Meta / TikTok y GTM, si los usas.
