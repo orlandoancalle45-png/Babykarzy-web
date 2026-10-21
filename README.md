@@ -6,7 +6,7 @@ Landing de ropa de bebé en 100% algodón pima (0 meses a 3 años). HTML estáti
 Las 9 prendas de "Nuestros básicos" tienen una foto por color (15 colores): `img/prendas/<prenda>/<color>.webp`. Para poner las fotos reales, reemplaza el archivo con el mismo nombre (WebP, 600x750, ideal menos de 60 KB). La página las carga sola, sin tocar código.
 
 - Prendas (carpetas, en el orden de la página): `body-manga-corta`, `body-manga-larga`, `bividi`, `polo-manga-corta`, `polo-manga-larga`, `cafarena`, `pantalon-sin-pie`, `pantalon-con-pie`, `short`
-- Colores (archivos, en el orden de la página): `verde-cemento`, `fresa`, `lila`, `palo-rosa`, `rosado`, `azul`, `cielo`, `celeste`, `plomo-plata`, `rojo`, `crema`, `amarillo`, `hueso`, `aqua`, `blanco`
+- Colores (archivos, en el orden de la página): `verde-cemento`, `fresa`, `lila`, `palo-rosa`, `rosado`, `azul`, `cielo`, `celeste`, `plomo-plata`, `rojo`, `beige`, `amarillo`, `hueso`, `aqua`, `blanco`
 
 ## Otras imágenes
 | Archivo | Dónde sale | Medidas |
@@ -14,7 +14,7 @@ Las 9 prendas de "Nuestros básicos" tienen una foto por color (15 colores): `im
 | `img/hero.svg` | portada (ilustración referencial de dos bebés) | ya incluida |
 | `img/hero.webp` | portada: si subes este archivo (foto real), reemplaza a la ilustración sola | 900x1125 (4:5), < 150 KB |
 | `img/logo.webp` | menú | alto ~88 px |
-| `img/tienda.webp` | sección "Nuestra tienda en Gamarra" | 1200x900 |
+| `img/fachada-tienda.webp` | sección "Nuestra tienda en Gamarra" (recorte de `img/fachada-tienda.jpg`, sin las franjas de dirección y contacto) | ya incluida |
 | `img/algodon-pima.webp` | sección "Calidad de la tela" | 800x800 |
 | `img/og/baby-karzy.jpg` | vista previa al compartir | 1200x630 |
 
