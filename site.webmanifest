@@ -1,0 +1,15 @@
+{
+  "name": "Baby Karzy",
+  "short_name": "Baby Karzy",
+  "description": "Ropa de bebé en 100% algodón pima, de 0 meses a 3 años. Tienda en Gamarra.",
+  "lang": "es-PE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFE4F3",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
