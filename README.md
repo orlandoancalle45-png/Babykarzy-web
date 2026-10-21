@@ -5,7 +5,7 @@ Landing de ropa de bebé en 100% algodón pima (0 meses a 3 años). HTML estáti
 ## Fotos de las prendas (hoy son imágenes de muestra)
 Las 9 prendas de "Nuestros básicos" tienen una foto por color (15 colores): `img/prendas/<prenda>/<color>.webp`. Para poner las fotos reales, reemplaza el archivo con el mismo nombre (WebP, 600x750, ideal menos de 60 KB). La página las carga sola, sin tocar código.
 
-- Prendas (carpetas, en el orden de la página): `body-manga-corta`, `body-manga-larga`, `bividi`, `polo-manga-corta`, `polo-manga-larga`, `cafarena`, `pantalon-sin-pie`, `pantalon-con-pie`, `short`
+- Prendas (carpetas, en el orden de la página): `pantalon-sin-pie`, `polo-manga-corta`, `polo-manga-larga`, `cafarena`, `short`, `bividi`, `body-manga-corta`, `body-manga-larga`, `pantalon-con-pie`
 - Colores (archivos, en el orden de la página): `verde-cemento`, `fresa`, `lila`, `palo-rosa`, `rosado`, `azul`, `cielo`, `celeste`, `plomo-plata`, `rojo`, `beige`, `amarillo`, `hueso`, `aqua`, `blanco`
 
 ## Otras imágenes
