@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <title>Almacén de Telas</title>
+  <meta name="theme-color" content="#00c853">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Almacén">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    html, body { margin:0; padding:0; height:100%; background:#f4f6f8; overflow:hidden; }
+    iframe { position:fixed; inset:0; width:100%; height:100%; border:0; }
+    #cargando { position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+                font-family:Arial, sans-serif; font-size:20px; color:#00a043; background:#f4f6f8; }
+  </style>
+</head>
+<body>
+  <div id="cargando">Cargando almacén…</div>
+  <!-- Si algún día cambias el link de la app, reemplázalo aquí -->
+  <iframe id="app"
+    src="https://script.google.com/macros/s/AKfycbyjki2FcSex-8J0QIHLKzZOboreCjo2xj6nylZyR0F7WaNw8wtv2gtmMQEZk5IPjhHq/exec"
+    allow="clipboard-write"
+    onload="document.getElementById('cargando').style.display='none'"></iframe>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+  </script>
+</body>
+</html>
