@@ -2,9 +2,11 @@
 
 Landing de ropa de bebé en 100% algodón pima (0 meses a 3 años). HTML estático, sin dependencias: abre `index.html` o publícalo en cualquier hosting.
 
-## Fotos de las prendas (hoy son imágenes de muestra)
-Las 9 prendas de "Nuestros básicos" tienen una foto por color (15 colores): `img/prendas/<prenda>/<color>.webp`. Para poner las fotos reales, reemplaza el archivo con el mismo nombre (WebP, 600x750, ideal menos de 60 KB). La página las carga sola, sin tocar código.
+## Fotos de las prendas
+Las 9 prendas de "Nuestros básicos" tienen una foto por color (15 colores): `img/prendas/<prenda>/<color>.webp`. Para cambiar una foto, reemplaza el archivo con el mismo nombre; la página la carga sola, sin tocar código.
 
+- **Pantalón sin pie: ya tiene fotos reales** (WebP con fondo transparente, 800x1000, unos 65 KB cada una). Los PNG originales están en `img/prendas/pantalon-sin-pie/originales/`. Se muestran completas, sin recortar, sobre un fondo `#FFF3F9`.
+- Las otras 8 prendas siguen con imágenes de muestra (WebP 600x750). Cuando tengas sus fotos reales, súbelas con el mismo nombre y avísame para mostrarlas completas sobre el fondo suave.
 - Prendas (carpetas, en el orden de la página): `pantalon-sin-pie`, `polo-manga-corta`, `polo-manga-larga`, `cafarena`, `short`, `bividi`, `body-manga-corta`, `body-manga-larga`, `pantalon-con-pie`
 - Colores (archivos, en el orden de la página): `celeste`, `cielo`, `plomo-plata`, `rojo`, `azul`, `rosado`, `lila`, `palo-rosa`, `fresa`, `verde-pastel`, `blanco`, `verde-cemento`, `crema`, `beige`, `amarillo`
 
