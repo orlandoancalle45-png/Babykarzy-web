@@ -1,7 +1,7 @@
 {
-  "name": "Almacén de Telas",
-  "short_name": "Almacén",
-  "description": "Ingresos, salidas y stock de telas",
+  "name": "ALMACEN-CORTE",
+  "short_name": "ALMACEN-CORTE",
+  "description": "Almacén de telas y avíos, corte, bordado y despachos a talleres",
   "id": "./",
   "start_url": "./",
   "scope": "./",
