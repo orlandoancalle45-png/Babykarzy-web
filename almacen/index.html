@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-  <title>Almacén de Telas</title>
+  <title>Almacén y Corte</title>
   <meta name="theme-color" content="#00c853">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Almacén">
@@ -19,15 +19,49 @@
 </head>
 <body>
   <div id="cargando">Cargando almacén…</div>
-  <!-- Si algún día cambias el link de la app, reemplázalo aquí -->
+  <!-- ▼▼ LINK DE LA APP: si cambias de cuenta o de implementación, reemplázalo aquí ▼▼ -->
   <iframe id="app"
     src="https://script.google.com/macros/s/AKfycbyjki2FcSex-8J0QIHLKzZOboreCjo2xj6nylZyR0F7WaNw8wtv2gtmMQEZk5IPjhHq/exec"
-    allow="clipboard-write"
+    allow="clipboard-write; web-share"
     onload="document.getElementById('cargando').style.display='none'"></iframe>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').catch(function () {});
     }
+
+    // Enviar el PDF de las guías como ARCHIVO (WhatsApp, etc.).
+    // La app de Google le pasa el PDF a esta página y aquí se abre "Compartir" de Android.
+    window.addEventListener('message', function (e) {
+      var d = e.data || {};
+      if (d.app !== 'almacen') return;
+      var host = '';
+      try { host = new URL(e.origin).hostname; } catch (x) {}
+      if (!/\.googleusercontent\.com$/.test(host) && host !== 'script.google.com') return;
+      var responder = function (m) { m.app = 'almacen'; try { e.source.postMessage(m, '*'); } catch (x) {} };
+
+      if (d.tipo === 'hola') {
+        responder({ tipo: 'wrapper', compartir: !!(navigator.share && navigator.canShare) });
+        return;
+      }
+      if (d.tipo === 'compartir') {
+        try {
+          var bin = atob(d.base64), bytes = new Uint8Array(bin.length);
+          for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          var f = new File([bytes], d.nombre || 'guia.pdf', { type: 'application/pdf' });
+          if (!navigator.canShare || !navigator.canShare({ files: [f] })) {
+            responder({ tipo: 'resultado', ok: false, error: 'NoSoportado' });
+            return;
+          }
+          var datos = { files: [f] };
+          if (d.texto) datos.text = d.texto;
+          navigator.share(datos)
+            .then(function () { responder({ tipo: 'resultado', ok: true }); })
+            .catch(function (err) { responder({ tipo: 'resultado', ok: false, error: err && err.name }); });
+        } catch (err) {
+          responder({ tipo: 'resultado', ok: false, error: 'Error' });
+        }
+      }
+    });
   </script>
 </body>
 </html>
