@@ -29,8 +29,8 @@
       navigator.serviceWorker.register('sw.js').catch(function () {});
     }
 
-    // Enviar el PDF de las guías como ARCHIVO (WhatsApp, etc.).
-    // La app de Google le pasa el PDF a esta página y aquí se abre "Compartir" de Android.
+    // Enviar las guías como ARCHIVO (PDF o IMAGEN) por WhatsApp, etc.
+    // La app de Google le pasa el archivo a esta página y aquí se abre "Compartir" de Android.
     window.addEventListener('message', function (e) {
       var d = e.data || {};
       if (d.app !== 'almacen') return;
@@ -40,14 +40,15 @@
       var responder = function (m) { m.app = 'almacen'; try { e.source.postMessage(m, '*'); } catch (x) {} };
 
       if (d.tipo === 'hola') {
-        responder({ tipo: 'wrapper', compartir: !!(navigator.share && navigator.canShare) });
+        responder({ tipo: 'wrapper', compartir: !!(navigator.share && navigator.canShare), imagen: true });
         return;
       }
       if (d.tipo === 'compartir') {
         try {
           var bin = atob(d.base64), bytes = new Uint8Array(bin.length);
           for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-          var f = new File([bytes], d.nombre || 'guia.pdf', { type: 'application/pdf' });
+          var tipoArchivo = d.mime === 'image/png' || d.mime === 'image/jpeg' ? d.mime : 'application/pdf';
+          var f = new File([bytes], d.nombre || 'guia.pdf', { type: tipoArchivo });
           if (!navigator.canShare || !navigator.canShare({ files: [f] })) {
             responder({ tipo: 'resultado', ok: false, error: 'NoSoportado' });
             return;
